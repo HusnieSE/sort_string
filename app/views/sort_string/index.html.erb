@@ -2,7 +2,7 @@
 
 <div>
     <%= form_tag(contoller: "sort", method: "post") do %>
-        <%= label_tag(:text_string, "Enter a: ") %>
+        <%= label_tag(:text_string, "Enter a string: ") %>
         <%= text_field_tag(:text_string)%>
         <%= select_tag(:sort_type, options_for_select([["Quick Sort", "quick_sort"], ["Bubble Sort", "bubble_sort"]])) %>
         <%= submit_tag("SORT") %>
