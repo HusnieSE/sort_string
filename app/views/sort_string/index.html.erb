@@ -1,0 +1,26 @@
+<h1>Sort a String</h1>
+
+<div>
+    <%= form_tag(contoller: "sort", method: "post") do %>
+        <%= label_tag(:text_string, "Enter a: ") %>
+        <%= text_field_tag(:text_string)%>
+        <%= select_tag(:sort_type, options_for_select([["Quick Sort", "quick_sort"], ["Bubble Sort", "bubble_sort"]])) %>
+        <%= submit_tag("SORT") %>
+    <% end %>
+    <table>
+        <thead>
+            <tr>
+                <th> Input String </th>
+                <th> Sorted </th>
+            </tr>
+        </thead>
+        <% @text.map do |text| %>
+            <tbody>
+                <tr>
+                    <td> <%= text[:input_string]%> </td>
+                    <td> <%= text[:sorted]%> </td>
+                </tr>
+            </tbody>
+        <% end %>
+    </table>
+</div>
